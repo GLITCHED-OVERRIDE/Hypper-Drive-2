@@ -1,2 +1,2 @@
 # Hypper-Drive-2
-The better Version For Hypper-Drive
+The better Version of Hypper-Drive
