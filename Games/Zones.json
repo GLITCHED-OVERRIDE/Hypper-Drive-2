@@ -10,5 +10,11 @@
     "name": "1v1 Tennis",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/1%20V%201%20Tennis.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PC/1v1%20Tennis/index.html"
+  },
+  {
+    "type": "PC",
+    "name": "1 on 1 Soccer",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/1%20on%201%20Soccer.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PC/1%20on%201%20Soccer/index.html"
   }
 ]
