@@ -1,23 +1,4 @@
 {
   "version": 2,
-  "framework": null,
-  "builds": [],
-  "routes": [
-    {
-      "src": "^/$",
-      "dest": "/Games/Zones.json"
-    },
-    {
-      "src": "^/Games/?$",
-      "dest": "/Games/Zones.json"
-    },
-    {
-      "src": "^/Games/([^/]+)/?$",
-      "dest": "/Games/Zones.json"
-    },
-    {
-      "src": "^/Games/([^/]+)/([^/]+)/?$",
-      "dest": "/Games/Zones.json"
-    }
-  ]
+  "framework": null
 }
