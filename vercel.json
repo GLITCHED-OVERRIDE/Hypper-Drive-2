@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "^/$",
+      "dest": "/Games/Zones.json"
+    },
+    {
+      "src": "^/Games/?$",
+      "dest": "/Games/Zones.json"
+    },
+    {
+      "src": "^/Games/([^/]+)/?$",
+      "dest": "/Games/Zones.json"
+    },
+    {
+      "src": "^/Games/([^/]+)/([^/]+)/?$",
+      "dest": "/Games/Zones.json"
+    }
+  ]
+}
