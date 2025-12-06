@@ -47,5 +47,64 @@
 
   start();
 </script>
+  <script>
+async function router() {
+  const zones = await fetch("/Games/Zones.json").then(r => r.json());
+
+  const parts = window.location.pathname.split("/").filter(Boolean);
+  // Examples:
+  // "/" → []
+  // "/Games" → ["Games"]
+  // "/Games/PC" → ["Games","PC"]
+  // "/Games/PC/Cuphead" → ["Games","PC","Cuphead"]
+
+  // HOME PAGE
+  if (parts.length === 0) {
+    document.body.innerHTML = "<h1>Welcome</h1>";
+    return;
+  }
+
+  // /Games → Show list
+  if (parts.length === 1 && parts[0] === "Games") {
+    document.body.innerHTML = "<h2>All Games</h2><pre>" 
+      + JSON.stringify(zones, null, 2) + "</pre>";
+    return;
+  }
+
+  // /Games/[TYPE]/[NAME]
+  if (parts.length === 3 && parts[0] === "Games") {
+    const [_, type, rawName] = parts;
+    const name = decodeURIComponent(rawName);
+
+    const game = zones.find(
+      g => g.type === type && g.name.toLowerCase() === name.toLowerCase()
+    );
+
+    if (!game) {
+      document.body.innerHTML = "<h1>Game Not Found</h1>";
+      return;
+    }
+
+    // Set favicon to game cover
+    const icon = document.createElement("link");
+    icon.rel = "icon";
+    icon.href = game.cover;
+    document.head.appendChild(icon);
+
+    // Load iframe
+    const iframe = document.createElement("iframe");
+    iframe.src = game.url;
+    iframe.style = "width:100%;height:100vh;border:none;";
+    document.body.appendChild(iframe);
+
+    return;
+  }
+
+  // Otherwise → 404
+  document.body.innerHTML = "<h1>404 – Page Not Found</h1>";
+}
+
+router();
+  </script>
 </body>
 </html>
