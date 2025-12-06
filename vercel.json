@@ -1,21 +1,25 @@
 {
   "version": 2,
+  "framework": null,
+  "public": "Games",
+  "cleanUrls": false,
   "routes": [
     {
       "src": "^/$",
-      "dest": "/Games/Zones.json"
+      "dest": "/Zones.json"
     },
     {
       "src": "^/Games/?$",
-      "dest": "/Games/Zones.json"
+      "dest": "/Zones.json"
     },
     {
       "src": "^/Games/([^/]+)/?$",
-      "dest": "/Games/Zones.json"
+      "dest": "/Zones.json"
     },
     {
       "src": "^/Games/([^/]+)/([^/]+)/?$",
-      "dest": "/Games/Zones.json"
+      "dest": "/Zones.json"
     }
-  ]
+  ],
+  "ignoreCommand": "echo 'Skip checking everything except Games/Zones.json'"
 }
