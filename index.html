@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Loading…</title>
+</head>
+<body>
+<script>
+  // Load JSON and route the user
+  async function start() {
+    const res = await fetch("/Games/Zones.json");
+    const list = await res.json();
+
+    const parts = location.pathname.split("/").filter(Boolean);
+
+    // Home → redirect to /Games list
+    if (parts.length === 0) {
+      return location.href = "/Games/";
+    }
+
+    // /Games → show game list
+    if (parts.length === 1 && parts[0] === "Games") {
+      document.body.innerHTML = "<pre>" + JSON.stringify(list, null, 2) + "</pre>";
+      return;
+    }
+
+    // /Games/type/name → load THAT game
+    if (parts.length === 3 && parts[0] === "Games") {
+      const [_, type, name] = parts;
+      const game = list.find(g => g.type === type && g.name.toLowerCase() === name.toLowerCase());
+
+      if (!game) return document.body.innerHTML = "<h1>Game Not Found</h1>";
+
+      // Set favicon
+      const link = document.createElement("link");
+      link.rel = "icon";
+      link.href = game.cover;
+      document.head.appendChild(link);
+
+      // Load the URL of the game
+      const iframe = document.createElement("iframe");
+      iframe.src = game.url;
+      iframe.style = "width:100%;height:100vh;border:none;";
+      document.body.appendChild(iframe);
+    }
+  }
+
+  start();
+</script>
+</body>
+</html>
