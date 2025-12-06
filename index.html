@@ -1,110 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Loading…</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hypper-Drive-2 — Game Portal</title>
+<style>
+    body {
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background: #121212;
+        color: #ffffff;
+    }
+
+    h1, h2 {
+        text-align: center;
+    }
+
+    .game-list, .type-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .game-item {
+        background: #1e1e1e;
+        border-radius: 12px;
+        padding: 10px;
+        margin: 10px;
+        width: 180px;
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+    .game-item:hover {
+        transform: scale(1.05);
+    }
+
+    .game-item img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100vh;
+        border: none;
+    }
+</style>
 </head>
 <body>
+<h1>Hypper-Drive-2</h1>
+<h2 id="subtitle">Loading...</h2>
+<div id="content"></div>
+
 <script>
-  // Load JSON and route the user
-  async function start() {
-    const res = await fetch("/Games/Zones.json");
-    const list = await res.json();
-
-    const parts = location.pathname.split("/").filter(Boolean);
-
-    // Home → redirect to /Games list
-    if (parts.length === 0) {
-      return location.href = "/Games/";
-    }
-
-    // /Games → show game list
-    if (parts.length === 1 && parts[0] === "Games") {
-      document.body.innerHTML = "<pre>" + JSON.stringify(list, null, 2) + "</pre>";
-      return;
-    }
-
-    // /Games/type/name → load THAT game
-    if (parts.length === 3 && parts[0] === "Games") {
-      const [_, type, name] = parts;
-      const game = list.find(g => g.type === type && g.name.toLowerCase() === name.toLowerCase());
-
-      if (!game) return document.body.innerHTML = "<h1>Game Not Found</h1>";
-
-      // Set favicon
-      const link = document.createElement("link");
-      link.rel = "icon";
-      link.href = game.cover;
-      document.head.appendChild(link);
-
-      // Load the URL of the game
-      const iframe = document.createElement("iframe");
-      iframe.src = game.url;
-      iframe.style = "width:100%;height:100vh;border:none;";
-      document.body.appendChild(iframe);
-    }
-  }
-
-  start();
-</script>
-  <script>
 async function router() {
-  const zones = await fetch("/Games/Zones.json").then(r => r.json());
+    const zones = await fetch("/Games/Zones.json").then(r => r.json());
+    const content = document.getElementById("content");
+    const subtitle = document.getElementById("subtitle");
 
-  const parts = window.location.pathname.split("/").filter(Boolean);
-  // Examples:
-  // "/" → []
-  // "/Games" → ["Games"]
-  // "/Games/PC" → ["Games","PC"]
-  // "/Games/PC/Cuphead" → ["Games","PC","Cuphead"]
+    const parts = window.location.pathname.split("/").filter(Boolean);
 
-  // HOME PAGE
-  if (parts.length === 0) {
-    document.body.innerHTML = "<h1>Welcome</h1>";
-    return;
-  }
-
-  // /Games → Show list
-  if (parts.length === 1 && parts[0] === "Games") {
-    document.body.innerHTML = "<h2>All Games</h2><pre>" 
-      + JSON.stringify(zones, null, 2) + "</pre>";
-    return;
-  }
-
-  // /Games/[TYPE]/[NAME]
-  if (parts.length === 3 && parts[0] === "Games") {
-    const [_, type, rawName] = parts;
-    const name = decodeURIComponent(rawName);
-
-    const game = zones.find(
-      g => g.type === type && g.name.toLowerCase() === name.toLowerCase()
-    );
-
-    if (!game) {
-      document.body.innerHTML = "<h1>Game Not Found</h1>";
-      return;
+    // Home page → show list of types
+    if (parts.length === 0 || (parts.length === 1 && parts[0] === "Games")) {
+        subtitle.textContent = "Select a game type:";
+        const types = [...new Set(zones.map(g => g.type))];
+        const container = document.createElement("div");
+        container.className = "type-list";
+        types.forEach(t => {
+            const div = document.createElement("div");
+            div.className = "game-item";
+            div.textContent = t;
+            div.onclick = () => window.location.href = `/Games/${t}`;
+            container.appendChild(div);
+        });
+        content.appendChild(container);
+        return;
     }
 
-    // Set favicon to game cover
-    const icon = document.createElement("link");
-    icon.rel = "icon";
-    icon.href = game.cover;
-    document.head.appendChild(icon);
+    // /Games/[type] → show list of games in type
+    if (parts.length === 2 && parts[0] === "Games") {
+        const type = parts[1];
+        const games = zones.filter(g => g.type === type);
+        if (!games.length) {
+            subtitle.textContent = "No games found in this type";
+            return;
+        }
+        subtitle.textContent = `Games in ${type}:`;
+        const container = document.createElement("div");
+        container.className = "game-list";
+        games.forEach(g => {
+            const div = document.createElement("div");
+            div.className = "game-item";
+            div.innerHTML = `<img src="${g.cover}" alt="${g.name}"><br>${g.name}`;
+            div.onclick = () => window.location.href = `/Games/${type}/${encodeURIComponent(g.name)}`;
+            container.appendChild(div);
+        });
+        content.appendChild(container);
+        return;
+    }
 
-    // Load iframe
-    const iframe = document.createElement("iframe");
-    iframe.src = game.url;
-    iframe.style = "width:100%;height:100vh;border:none;";
-    document.body.appendChild(iframe);
+    // /Games/[type]/[name] → load the game iframe
+    if (parts.length === 3 && parts[0] === "Games") {
+        const type = parts[1];
+        const name = decodeURIComponent(parts[2]);
+        const game = zones.find(g => g.type === type && g.name.toLowerCase() === name.toLowerCase());
+        if (!game) {
+            subtitle.textContent = "Game Not Found";
+            return;
+        }
 
-    return;
-  }
+        // set favicon
+        const link = document.createElement("link");
+        link.rel = "icon";
+        link.href = game.cover;
+        document.head.appendChild(link);
 
-  // Otherwise → 404
-  document.body.innerHTML = "<h1>404 – Page Not Found</h1>";
+        subtitle.textContent = game.name;
+        const iframe = document.createElement("iframe");
+        iframe.src = game.url;
+        content.appendChild(iframe);
+        return;
+    }
+
+    // 404 fallback
+    subtitle.textContent = "404 – Page Not Found";
 }
 
 router();
-  </script>
+</script>
 </body>
 </html>
