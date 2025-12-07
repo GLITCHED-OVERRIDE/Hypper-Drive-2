@@ -142,5 +142,11 @@
     "name": "A Bugs Life",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/A%20Bugs%20Life.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/A%20Bugs%20Life/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "Banjo Kazooie",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Banjo%20Kazooie.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Banjo%20Kazooie/index.html"
   }
 ]
