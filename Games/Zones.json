@@ -112,5 +112,11 @@
     "name": "8 Ball Classics",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/8%20Ball%20Billards%20Classic.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Moblie/8%20Ball%20Classic/index.html"
+  },
+  {
+    "type": "PC",
+    "name": "1v1.lol",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/1v1.lol.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PC/1v1.lol/index.html"
   }
 ]
