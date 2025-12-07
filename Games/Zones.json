@@ -76,5 +76,11 @@
     "name": "10 Bullets",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/10%20Bullets.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PC/10%20Bullets/index.html"
+  },
+  {
+    "type": "PC",
+    "name": "10 Minutes Till Dawn",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/10%20Minutes%20Till%20Dawn.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PC/10%20minutes%20Till%20Dawn/index.html"
   }
 ]
