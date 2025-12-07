@@ -1,1 +1,56 @@
+<!doctype html>
+<html lang="en">
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 Mini Battles</title>
+
+    <style>
+        body {
+            background: #000;
+            color: #ccc;
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            image-rendering: optimizeSpeed;
+            -webkit-interpolation-mode: nearest-neighbor;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        #canvas:-webkit-full-screen {
+            width: 100%;
+            height: 100%;
+        }
+
+        .gm4html5_div_class {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Game Canvas -->
+    <div class="gm4html5_div_class" id="gm4html5_div_id">
+        <canvas id="canvas" width="1280" height="720">
+            <p>Your browser doesn't support HTML5 canvas.</p>
+        </canvas>
+    </div>
+
+    <!-- GameMaker JS (No Ads) -->
+    <script src="https://cdn.jsdelivr.net/gh/yrgen73/12@250ba40ef0fed9b3106d4a2af96e463b819f54ef/12.js"></script>
+
+    <script>
+        window.onload = GameMaker_Init;
+    </script>
+
+</body>
+
+</html>
