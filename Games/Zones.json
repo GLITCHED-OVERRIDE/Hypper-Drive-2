@@ -94,5 +94,11 @@
     "name": "12 Mini Battles",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/12%20Mini%20Battles.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Moblie/12%20Mini%20Battles/index.html"
+  },
+  {
+    "type": "PC",
+    "name": "2D Shooters",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/2D%20Shooter.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PC/2D%20Shooter/index.html"
   }
-    ]
+]
