@@ -1,0 +1,15 @@
+{
+  "name": "Shooter2DOnline",
+  "short_name": "Shooter2DOnline",
+  "start_url": "index.html",
+  "display": "fullscreen",
+  "background_color": "#183D47",
+  "theme_color": "#000",
+  "description": "",
+  "icons": [{
+    "src": "https://cdn.jsdelivr.net/gh/dayyiq/fdfd@main/TemplateData/logo.png",
+    "sizes": "144x144",
+    "type": "image/png",
+    "purpose": "any maskable"
+  }]
+}
