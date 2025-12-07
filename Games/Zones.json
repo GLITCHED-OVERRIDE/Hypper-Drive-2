@@ -124,5 +124,11 @@
     "name": "8 Ball Pool",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/8%20Ball%20Pool.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Moblie/8%20Ball%20Pool/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "007 The World Is Not Enough",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/007%20The%20World%20Is%20Not%20Enough.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/007%20The%20World%20Is%20Not%20Enough/index.html"
   }
 ]
