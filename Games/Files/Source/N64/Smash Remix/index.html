@@ -1,1 +1,171 @@
+<html>
 
+<head>
+  <title>Hypper Drive 2 | Smash Remix</title>
+
+  <script>
+    window.gameconfig = {
+      name: "Smash_Remix_2.0.0",
+      url: "https://cdn.jsdelivr.net/gh/GLITCHED-OVERRIDE/Hypper-Drive-2/Games/Files/Source/N64/Smash Remix/Smash_Remix_2.0.0.z64",
+      core: "n64",
+      min: 1,
+      max: 4,
+    };
+  </script>
+
+  <script>
+    function mergeFiles(fileParts, cb) {
+      return new Promise((resolve, reject) => {
+        let buffers = [];
+
+        function fetchPart(index) {
+          if (index >= fileParts.length) {
+            let mergedBlob = new Blob(buffers);
+            let mergedFileUrl = URL.createObjectURL(mergedBlob);
+            resolve(mergedFileUrl);
+            return;
+          }
+
+          fetch(fileParts[index])
+            .then(response => response.arrayBuffer())
+            .then(data => {
+              buffers.push(data);
+              cb(index + 1);
+              fetchPart(index + 1);
+            })
+            .catch(reject);
+        }
+
+        fetchPart(0);
+      });
+    }
+
+    function getParts(file, start, end) {
+      let parts = [];
+      for (let i = start; i <= end; i++) {
+        parts.push(file + ".part" + i);
+      }
+      return parts;
+    }
+  </script>
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* FIX: Use a vertical flexbox that always fits on screen */
+    #loading-screen {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;   /* keeps centered */
+      align-items: center;
+      padding: 20px;             /* prevents clipping on tall screens */
+      box-sizing: border-box;
+      gap: 4vh;                  /* dynamic spacing */
+    }
+
+    /* FIX: Auto-fit image based on screen height */
+    #loading-image {
+      width: 50vw;
+      max-width: 600px;
+      height: auto;
+      max-height: 40vh;          /* prevents pushing the bar off-screen */
+      object-fit: contain;
+    }
+
+    /* FIX: Bar also scales to screen width */
+    #loading-bar-bg {
+      width: 70vw;
+      max-width: 600px;
+      height: 22px;
+      background: #333;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    #loading-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: white;
+      transition: width 0.2s linear;
+    }
+
+    #game-container {
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- WAITING SCREEN -->
+  <div id="loading-screen">
+    <img id="loading-image"
+      src="https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/H.D.2.png">
+    <div id="loading-bar-bg">
+      <div id="loading-bar-fill"></div>
+    </div>
+  </div>
+
+  <!-- GAME AREA -->
+  <div id="game-container">
+    <div id="game"></div>
+  </div>
+
+  <script>
+    var parts = getParts(
+      window.gameconfig.url,
+      window.gameconfig.min,
+      window.gameconfig.max
+    );
+    var totalParts = parts.length;
+
+    function updateLoadingProgress(loaded) {
+      const barFill = document.getElementById("loading-bar-fill");
+      let percent = (loaded / totalParts) * 100;
+      barFill.style.width = percent + "%";
+    }
+
+    Promise.all([mergeFiles(parts, updateLoadingProgress)])
+      .then(([gameUrl]) => {
+        document.getElementById("loading-screen").style.display = "none";
+        document.getElementById("game-container").style.display = "block";
+
+        EJS_player = "#game";
+        EJS_core = window.gameconfig.core;
+        EJS_gameName = window.gameconfig.name;
+        EJS_color = "#0064ff";
+        EJS_startOnLoaded = true;
+        EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
+        EJS_gameUrl = gameUrl;
+
+        const script = document.createElement("script");
+        script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
+        document.body.appendChild(script);
+      })
+      .catch(error => {
+        console.error(error);
+        document.getElementById("loading-bar-fill").style.background = "red";
+      });
+  </script>
+
+</body>
+
+  </html>
