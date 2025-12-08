@@ -154,5 +154,11 @@
     "name": "Banjo Tooie",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Banjo%20Tooie.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Banjo%20Tooie/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "Batman of The Future: Return of the Joker",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Batman%20of%20the%20Future-Return%20of%20The%20Joker.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Batman%20of%20the%20Future%3A%20Return%20of%20The%20Joker/index.html"
   }
 ]
