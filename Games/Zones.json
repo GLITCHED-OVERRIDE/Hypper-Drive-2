@@ -184,5 +184,11 @@
     "name": "Castlevania: Legacy of Darkness",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Castlevania-Legacy%20of%20Darkness.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Castlevania%3A%20Legacy%20of%20Darkness/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "Conker's Bad Fur Day",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Conker's%20Bad%20Fur%20Day.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Conker's%20Bad%20Fur%20Day/index.html"
   }
 ]
