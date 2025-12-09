@@ -190,5 +190,11 @@
     "name": "Conker's Bad Fur Day",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Conker's%20Bad%20Fur%20Day.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Conker's%20Bad%20Fur%20Day/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "Cruis'n USA",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Cruis'n%20USA.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Cruis'n%20USA/index.html"
   }
 ]
