@@ -178,5 +178,11 @@
     "name": "Castlevania",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Castlevania.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Castlevania/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "Castlevania: Legacy of Darkness",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Castlevania-Legacy%20of%20Darkness.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Castlevania%3A%20Legacy%20of%20Darkness/index.html"
   }
 ]
