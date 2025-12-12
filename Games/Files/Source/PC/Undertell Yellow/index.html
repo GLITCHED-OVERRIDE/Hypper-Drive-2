@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <base href="https://cdn.jsdelivr.net/gh/GLITCHED-OVERRIDE/Hypper-Drive-2@main/Games/Files/Source/PC/Undertell Yellow/">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hypper Drive 2 | UNDERTALE YELLOW</title>
 
+    <style>
+        html, body {
+            margin:0; padding:0;
+            height:100%; width:100%;
+            background:black;
+        }
+
+        canvas {
+            display:none;
+            background:black;
+        }
+
+        .loading {
+            position:absolute;
+            inset:0;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            color:white;
+            font-family:Arial;
+        }
+
+        .spinner {
+            width:32px;
+            height:32px;
+            border:5px solid #bdff00;
+            border-top-color:#719900;
+            border-radius:50%;
+            animation:spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        progress {
+            width: 300px;
+            height: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Unity requires these IDs! -->
+    <div class="loading" id="loading">
+        <div class="spinner" id="spinner"></div>
+        <div id="status">Merging game files...</div>
+        <progress id="progress" value="0" max="100"></progress>
+    </div>
+
+    <canvas class="emscripten" id="canvas" tabindex="-1"></canvas>
+
+<script>
+/* ----------------------------------------------------
+   FETCH PART LIST
+-----------------------------------------------------*/
+function getParts(name, start, end) {
+    const arr = [];
+    for (let i = start; i <= end; i++) arr.push(name + ".part" + i);
+    return arr;
+}
+
+/* ----------------------------------------------------
+   RELIABLE MERGE FUNCTION — PARALLEL DOWNLOADS
+-----------------------------------------------------*/
+async function mergeFiles(partList) {
+    const status = document.getElementById("status");
+    const progress = document.getElementById("progress");
+
+    status.innerText = "Downloading parts...";
+
+    const buffers = await Promise.all(
+        partList.map(async (url, i) => {
+            const resp = await fetch(url);
+            if (!resp.ok) throw new Error("Failed to get " + url);
+
+            let buf = await resp.arrayBuffer();
+
+            progress.value = ((i + 1) / partList.length) * 100;
+            status.innerText = `Downloaded part ${i+1}/${partList.length}`;
+
+            return buf;
+        })
+    );
+
+    status.innerText = "Merging...";
+
+    return URL.createObjectURL(
+        new Blob(buffers, { type: "application/octet-stream" })
+    );
+}
+
+/* ----------------------------------------------------
+   MAIN LOADER
+-----------------------------------------------------*/
+(async () => {
+    const parts = getParts("game.unx", 1, 12);
+
+    // Merge disk parts → one virtual file
+    window.gameUnxUrl = await mergeFiles(parts);
+
+    const status = document.getElementById("status");
+    status.innerText = "Preparing engine...";
+
+    /* --------------------------
+       FETCH Override
+    ---------------------------*/
+    const originalFetch = window.fetch;
+
+    window.fetch = async function(url, options) {
+        if (typeof url === "string" && url.includes("game.unx")) {
+            url = window.gameUnxUrl;
+        }
+        return originalFetch(url, options);
+    };
+
+    /* --------------------------
+       XHR Override
+    ---------------------------*/
+    const originalOpen = XMLHttpRequest.prototype.open;
+
+    XMLHttpRequest.prototype.open = function(method, url, ...rest) {
+        if (typeof url === "string" && url.includes("game.unx")) {
+            url = window.gameUnxUrl;
+        }
+        return originalOpen.call(this, method, url, ...rest);
+    };
+
+    status.innerText = "Loading Unity...";
+
+    /* --------------------------
+       Load Unity Scripts
+    ---------------------------*/
+    const s1 = document.createElement("script");
+    s1.src = "index.js";
+    document.body.appendChild(s1);
+
+    const s2 = document.createElement("script");
+    s2.src = "runner.js";
+    document.body.appendChild(s2);
+
+    s2.onload = () => {
+        // IMPORTANT: we only HIDE loading — not remove it
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("canvas").style.display = "block";
+    };
+})();
+</script>
+
+</body>
+  </html>
