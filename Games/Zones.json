@@ -232,5 +232,11 @@
     "name": "DELTATRAVELER",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/DELTATRAVELER.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PC/DELTATRAVELER/index.html"
+  },
+  {
+    "type": "PC",
+    "name": "Do NOT Take This Cat Home",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Do%20NOT%20Take%20This%20Cat%20Home.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PC/Do%20NOT%20Take%20This%20Cat%20Home/index.html"
   }
 ]
