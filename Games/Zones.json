@@ -238,5 +238,11 @@
     "name": "Do NOT Take This Cat Home",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Do%20NOT%20Take%20This%20Cat%20Home.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PC/Do%20NOT%20Take%20This%20Cat%20Home/index.html"
+  },
+  {
+    "type": "PC",
+    "name": "Fears to Fathom: Home Alone",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Fears%20to%20Fathom-Home%20Alone.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PC/Fears%20To%20Fathom%3A%20Home%20Alone/index.html"
   }
 ]
