@@ -250,5 +250,11 @@
     "name": "Diddy Kong Racing",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Diddy%20Kong%20Racing.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Diddy%20Kong%20Racing/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "Disney's Tarzan",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Disney's%20Tarzan.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Disney's%20Tarzan/index.html"
   }
 ]
