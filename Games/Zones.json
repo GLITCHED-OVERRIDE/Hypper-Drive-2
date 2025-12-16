@@ -244,5 +244,11 @@
     "name": "Fears to Fathom: Home Alone",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Fears%20to%20Fathom-Home%20Alone.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PC/Fears%20To%20Fathom%3A%20Home%20Alone/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "Diddy Kong Racing",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Diddy%20Kong%20Racing.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Diddy%20Kong%20Racing/index.html"
   }
 ]
