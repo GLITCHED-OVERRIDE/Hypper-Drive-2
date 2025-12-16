@@ -280,5 +280,11 @@
     "name": "Dr. Mario 64",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Dr.%20Mario%2064.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Dr.%20Mario%2064/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "Duke Nukem 64",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Duke%20Nukem%2064.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Duke%20Nukem%2064/index.html"
   }
 ]
