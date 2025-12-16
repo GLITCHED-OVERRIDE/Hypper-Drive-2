@@ -256,5 +256,11 @@
     "name": "Disney's Tarzan",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Disney's%20Tarzan.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Disney's%20Tarzan/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "Disney’s Donald Duck: Goin’ Quackers",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Disney's%20Donald%20Duck-Goin%20Quakers.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Disney%E2%80%99s%20Donald%20Duck%3A%20Goin%E2%80%99%20Quackers/index.html"
   }
 ]
