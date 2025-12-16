@@ -262,5 +262,11 @@
     "name": "Disney’s Donald Duck: Goin’ Quackers",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Disney's%20Donald%20Duck-Goin%20Quakers.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Disney%E2%80%99s%20Donald%20Duck%3A%20Goin%E2%80%99%20Quackers/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "Donkey Kong 64",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Donkey%20Kong%2064.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Donkey%20Kong%2064/index.html"
   }
 ]
