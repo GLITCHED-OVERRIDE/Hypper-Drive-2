@@ -292,5 +292,11 @@
     "name": "Earthworm Jim 3D",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Earthworm%20Jim%203D.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Earthworm%20Jim%203D/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "Excitebike 64",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Excitebike%2064.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Excitebike%2064/index.html"
   }
 ]
