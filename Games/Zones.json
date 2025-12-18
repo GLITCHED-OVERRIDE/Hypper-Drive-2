@@ -328,5 +328,11 @@
     "name": "GoldenEye 007",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/GoldenEye%20007.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/GoldenEye%20007/index.html"
+  }, 
+  {
+    "type": "N64",
+    "name": "Hot Wheels: Turbo Racing",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Hot%20Wheels-%20Turbo%20Racing.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Hot%20Wheels%3A%20Turbo%20Racing/index.html"
   }
 ]
