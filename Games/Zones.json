@@ -340,5 +340,11 @@
     "name": "Indiana Jones and the Infernal Mechine",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Indiana%20Jones%20and%20the%20Infernal%20Mechine.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Indiana%20Jones%20and%20the%20Infernal%20Mechine/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "Jet Force Gemini",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Jet%20Force%20Gemini.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Jet%20Force%20Gemini/index.html"
   }
 ]
