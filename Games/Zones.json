@@ -322,5 +322,11 @@
     "name": "Gex 64: Enter the Gecko",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Gex%2064-Enter%20The%20Gecko.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Gex%2064%3A%20Enter%20The%20Gecko/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "GoldenEye 007",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/GoldenEye%20007.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/GoldenEye%20007/index.html"
   }
 ]
