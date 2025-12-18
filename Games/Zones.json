@@ -69,7 +69,7 @@
     "type": "N64",
     "name": "Smash Remix",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Smash%20Remix.png",
-    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Smash%20Remix/index.html"
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Smash%20RcoverIndex.html"
   },
   {
     "type": "PC",
@@ -364,5 +364,11 @@
     "name": "The Legend of Zelda: Majora's Mask",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/The%20Legend%20of%20Zelda-%20Majora's%20Mask.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/The%20Legend%20of%20Zelda%3A%20Majora's%20Mask/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "The Legend of Zelda: Ocarina of Time",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/The%20Legend%20of%20Zelda-%20Ocarina%20of%20Time.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/The%20Legend%20of%20Zelda%3A%20Ocarina%20of%20Time/index.html"
   }
 ]
