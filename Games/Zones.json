@@ -346,5 +346,11 @@
     "name": "Jet Force Gemini",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Jet%20Force%20Gemini.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Jet%20Force%20Gemini/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "Kirby 64: The Crystal Shards",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Kirby%2064-%20The%20Crystal%20Shards.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Kirby%2064%3A%20The%20Crystal%20Shards/index.html"
   }
 ]
