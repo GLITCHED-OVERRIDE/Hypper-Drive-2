@@ -358,5 +358,11 @@
     "name": "LEGO Racers",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/LEGO%20Racers.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/LEGO%20Racers/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "The Legend of Zelda: Majora's Mask",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/The%20Legend%20of%20Zelda-%20Majora's%20Mask.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/The%20Legend%20of%20Zelda%3A%20Majora's%20Mask/index.html"
   }
 ]
