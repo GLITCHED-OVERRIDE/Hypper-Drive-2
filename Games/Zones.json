@@ -352,5 +352,11 @@
     "name": "Kirby 64: The Crystal Shards",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Kirby%2064-%20The%20Crystal%20Shards.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Kirby%2064%3A%20The%20Crystal%20Shards/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "LEGO Racers",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/LEGO%20Racers.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/LEGO%20Racers/index.html"
   }
 ]
