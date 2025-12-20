@@ -442,5 +442,11 @@
     "name": "Mortal Kombat Trilogy",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Mortal%20Kombat%20Trilogy.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Mortal%20Kombat%20Trilogy/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "Paper Mario",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Paper%20Mario.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Paper%20Mario/index.html"
   }
 ]
