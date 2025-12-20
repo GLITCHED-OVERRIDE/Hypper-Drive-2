@@ -424,5 +424,11 @@
     "name": "Mickey's Speedway USA",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Mickey's%20Speedway%20USA.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Mickey's%20Speedway%20USA/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "Mortal Kombat 4",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Mortal%20Kombat%204.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Mortal%20Kombat%204/index.html"
   }
 ]
