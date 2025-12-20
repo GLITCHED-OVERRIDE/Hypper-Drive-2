@@ -418,5 +418,11 @@
     "name": "Mega Man 64",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Mega%20Man%2064.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Mega%20Man%2064/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "Mickey's Speedway USA",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Mickey's%20Speedway%20USA.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Mickey's%20Speedway%20USA/index.html"
   }
 ]
