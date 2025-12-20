@@ -436,5 +436,11 @@
     "name": "Mortal Kombat Mythologies: Sub-Zero",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Mortal%20Kombat%20Mythologies-%20Sub-Zero.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Mortal%20Kombat%20Mythologies%3A%20Sub-Zero/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "Mortal Kombat Trilogy",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Mortal%20Kombat%20Trilogy.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Mortal%20Kombat%20Trilogy/index.html"
   }
 ]
