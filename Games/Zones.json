@@ -454,5 +454,11 @@
     "name": "Perfect Dark",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Perfect%20Dark.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Perfect%20Dark/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "Pokemon Snap",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Pokemon%20Snap.png",
+    "url": "https://github.com/GLITCHED-OVERRIDE/Hypper-Drive-2/edit/main/Games/Files/Source/N64/Pokemon%20Snap/index.html"
   }
 ]
