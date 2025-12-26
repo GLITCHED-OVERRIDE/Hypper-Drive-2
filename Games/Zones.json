@@ -490,5 +490,11 @@
     "name": "Quest 64",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Quest%2064.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Quest%2064/index.html"
+  },
+  {
+    "type": "N64",
+    "name": "Rampage 2: Universal Tour",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Rampage%202-%20Universal%20Tour.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Rampage%202%3A%20Universal%20Tour/index.html"
   }
 ]
