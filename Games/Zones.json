@@ -532,5 +532,11 @@
     "name": "Ace Combat 3",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Ace%20Combat%203.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PS1/Ace%20Combat%203/index.html"
+  }, 
+  {
+    "type": "GB",
+    "name": "Kirby's Dream Land 2",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Kirby's%20Dream%20Land%202.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/GB/Kirby's%20Dream%20Land%202/index.html"
   }
 ]
