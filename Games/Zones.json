@@ -502,5 +502,11 @@
     "name": "Rampage: World Tour",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Rampage-%20World%20Tour.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/N64/Rampage%3A%20World%20Tour/index.html"
+  },
+  {
+    "type": "NDS",
+    "name": "Animal Crossing: Wild World",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Animal%20Crossing-%20Wild%20World.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/NDS/Animal%20Crossing%3A%20Wild%20World/index.html"
   }
 ]
