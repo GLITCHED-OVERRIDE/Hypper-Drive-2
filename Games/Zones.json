@@ -520,5 +520,11 @@
     "name": "Ace Combat 2",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Ace%20Combat%202.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PS1/Ace%20Combat%202/index.html"
+  },
+  {
+    "type": "PC",
+    "name": "Balatro",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Balatro.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PC/Balatro/index.html"
   }
 ]
