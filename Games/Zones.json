@@ -508,5 +508,11 @@
     "name": "Animal Crossing: Wild World",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Animal%20Crossing-%20Wild%20World.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/NDS/Animal%20Crossing%3A%20Wild%20World/index.html"
+  },
+  {
+    "type": "NDS",
+    "name": "Assassin's Creed II: Discovery",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Assassin's%20Creed%20II-%20Discovery.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/NDS/Assassin's%20Creed%20II%3A%20Discovery/index.html"
   }
 ]
