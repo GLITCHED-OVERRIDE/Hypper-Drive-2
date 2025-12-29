@@ -514,5 +514,11 @@
     "name": "Assassin's Creed II: Discovery",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Assassin's%20Creed%20II-%20Discovery.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/NDS/Assassin's%20Creed%20II%3A%20Discovery/index.html"
+  },
+  {
+    "type": "PS1",
+    "name": "Ace Combat 2",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Ace%20Combat%202.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PS1/Ace%20Combat%202/index.html"
   }
 ]
