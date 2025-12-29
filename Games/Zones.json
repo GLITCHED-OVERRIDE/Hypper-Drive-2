@@ -538,5 +538,11 @@
     "name": "Kirby's Dream Land 2",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Kirby's%20Dream%20Land%202.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/GB/Kirby's%20Dream%20Land%202/index.html"
+  },
+  {
+    "type": "GB",
+    "name": "The Legend of Zelda: Links Awakening",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Legend%20of%20Zelda-%20Links%20Awakening.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/GB/Legend%20of%20Zelda%3A%20Links%20Awakening/index.html"
   }
 ]
