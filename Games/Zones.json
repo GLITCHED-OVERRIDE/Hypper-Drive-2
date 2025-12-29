@@ -550,5 +550,11 @@
     "name": "Sonic Advance",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Sonic%20Advance.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/GBA/Sonic%20Advance/index.html"
+  },
+  {
+    "type": "GBA",
+    "name": "Pokemon: Fire Red",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Pokemon-%20Fire%20Red.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/GBA/Pokemon%3A%20Fire%20Red/index.html"
   }
 ]
