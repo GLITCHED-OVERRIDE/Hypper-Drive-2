@@ -544,5 +544,11 @@
     "name": "The Legend of Zelda: Links Awakening",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Legend%20of%20Zelda-%20Links%20Awakening.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/GB/Legend%20of%20Zelda%3A%20Links%20Awakening/index.html"
+  },
+  {
+    "type": "GBA",
+    "name": "Sonic Advance",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Sonic%20Advance.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/GBA/Sonic%20Advance/index.html"
   }
 ]
