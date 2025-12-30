@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chrono Trigger</title>
+  <base href="https://cdn.jsdelivr.net/gh/a456pur/seraph@main/storage/emulatorjs/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #111;
+      color: #fff;
+      font-family: monospace;
+      font-weight: bold;
+      overflow: hidden;
+    }
+    #error {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #f33;
+      font-size: 18px;
+      text-align: center;
+      z-index: 1000;
+    }
+    #game {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+  <div id="error"></div>
+  <div id="game"></div>
+
+  <script>
+    const gameUrl = "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Glitched-Assets/main/Games/Large%20Assets/Chrono%20Trigger%20SNES/Chrono%20Trigger%20(USA).sfc";
+    const error = document.getElementById("error");
+    const gameContainer = document.getElementById("game");
+
+    (async () => {
+      try {
+        const res = await fetch(gameUrl);
+        if (!res.ok) throw new Error("Failed to fetch game file");
+        const blob = await res.blob();
+        const blobUrl = URL.createObjectURL(blob);
+
+        window.EJS_player = "#game";
+        window.EJS_gameName = "Chrono Trigger";
+        window.EJS_gameUrl = blobUrl;
+        window.EJS_core = "snes";
+        window.EJS_pathtodata = "data/";
+        window.EJS_startOnLoaded = true;
+
+        const script = document.createElement("script");
+        script.src = "data/loader.js";
+        script.onerror = () => error.textContent = "Failed to load EmulatorJS core.";
+        document.body.appendChild(script);
+
+      } catch (e) {
+        error.textContent = "Error: " + e.message;
+        console.error(e);
+      }
+    })();
+  </script>
+</body>
+</html>
+```0
