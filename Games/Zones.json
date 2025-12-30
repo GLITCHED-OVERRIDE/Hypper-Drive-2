@@ -556,5 +556,11 @@
     "name": "Pokemon: Fire Red",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Pokemon-%20Fire%20Red.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/GBA/Pokemon%3A%20Fire%20Red/index.html"
+  },
+  {
+    "type": "GBC",
+    "name": "The Legend of Zelda: Oracle of Ages",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/The%20Legend%20of%20Zelda-%20Oracal%20of%20Ages.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/GBC/The%20Legend%20of%20Zelda%3A%20Oracle%20of%20Ages/index.html"
   }
 ]
