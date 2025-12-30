@@ -580,5 +580,11 @@
     "name": "Donkey Kong Classics",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Donkey%20Kong%20Classics.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/NES/Donkey%20Kong%20Classics/index.html"
+  },
+  {
+    "type": "SNES",
+    "name": "Chrono Trigger",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Chrono%20Trigger.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/SNES/Chrono%20Trigger/index.html"
   }
 ]
