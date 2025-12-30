@@ -574,5 +574,11 @@
     "name": "Dig Dug",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Dig%20Dug.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/NES/Dig%20Dug/index.html"
+  },
+  {
+    "type": "NES",
+    "name": "Donkey Kong Classics",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Donkey%20Kong%20Classics.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/NES/Donkey%20Kong%20Classics/index.html"
   }
 ]
