@@ -568,5 +568,11 @@
     "name": "The Legend of Zelda: Oracle of Seasons",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/The%20Legend%20of%20Zelda-%20Oracle%20of%20Seasons.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/GBC/The%20Legend%20of%20Zelda%3A%20Oracle%20of%20Seasons/index.html"
+  },
+  {
+    "type": "NES",
+    "name": "Dig Dug",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Dig%20Dug.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/NES/Dig%20Dug/index.html"
   }
 ]
