@@ -610,5 +610,11 @@
     "name": "Sonic Jam",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Sonic%20Jam.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Sega%20Saturn/Sonic%20Jam/index.html"
+  },
+  {
+    "type": "SSat",
+    "name": "Sonic R",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Sonic%20R.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Sega%20Saturn/Sonic%20R/index.html"
   }
 ]
