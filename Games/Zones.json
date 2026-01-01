@@ -622,5 +622,11 @@
     "name": "Metal Slug: 1st Mission",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Metal%20Slug-%201st%20Mission.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/NGPC/Metal%20Slug%201st%20Mission/index.html"
+  },
+  {
+    "type": "NGPC",
+    "name": "Metal Slug: 2nd Mission",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Metal%20Slug-%202nd%20Mission.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/NGPC/Metal%20Slug%3A%202nd%20Mission/index.html"
   }
 ]
