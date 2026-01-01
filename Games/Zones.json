@@ -628,5 +628,11 @@
     "name": "Metal Slug: 2nd Mission",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Metal%20Slug-%202nd%20Mission.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/NGPC/Metal%20Slug%3A%202nd%20Mission/index.html"
+  },
+  {
+    "type": "MSDOS",
+    "name": "Command and Conquer",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Command%20and%20Conquer.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/MSDOS/Command%20and%20Conquer/index.html"
   }
 ]
