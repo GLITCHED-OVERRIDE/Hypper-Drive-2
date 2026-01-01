@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Ultimate Game Stash file -->
+<!-- https://docs.google.com/document/d/1_FmH3BlSBQI7FGgAQL59-ZPe8eCxs35wel6JUyVaG8Q/ -->
+
+<base href="https://cdn.jsdelivr.net/gh/GLITCHED-OVERRIDE/Hypper-Drive-2@main/Games/Files/Source/MSDOS/Command and Conquer/">
+<meta charset="UTF-8">
+
+<head>
+<title>Hypper Drive 2 | Command & Conquer (MS-DOS)</title>
+
+<style>
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: #000;
+  overflow: hidden;
+  font-family: monospace;
+  color: #fedb1d;
+}
+
+#canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background: #000;
+}
+
+/* ===== Hypper Drive 2 Loader ===== */
+#loading {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 999;
+}
+
+#logoWrap {
+  position: relative;
+  width: 260px;
+  height: 260px;
+}
+
+#logoWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+svg {
+  position: absolute;
+  inset: 0;
+  transform: rotate(-90deg);
+}
+
+circle {
+  fill: none;
+  stroke-width: 12;
+  stroke-linecap: round;
+}
+
+#bg {
+  stroke: rgba(255,255,255,0.08);
+}
+
+#fg {
+  stroke: red;
+  stroke-dasharray: 565.48;
+  stroke-dashoffset: 565.48;
+  transition: stroke-dashoffset 0.2s linear;
+}
+
+#text {
+  margin-top: 18px;
+  font-size: 15px;
+  color: #fff;
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="canvas" onClick="window.focus();"></canvas>
+
+<!-- ===== HD2 Loader ===== -->
+<div id="loading">
+  <div id="logoWrap">
+    <img src="https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/main/H.D.2.png">
+    <svg viewBox="0 0 200 200">
+      <circle id="bg" cx="100" cy="100" r="90"></circle>
+      <circle id="fg" cx="100" cy="100" r="90"></circle>
+    </svg>
+  </div>
+  <div id="text">Loading Command & Conquer…</div>
+</div>
+
+<script src="js/es6-promise.js"></script>
+<script src="js/browserfs.min.js"></script>
+<script src="js/loader.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+<script>
+const fg = document.getElementById("fg");
+const loading = document.getElementById("loading");
+
+/* ===== Original DOS Logic (UNCHANGED) ===== */
+function $_GET(param) {
+  var vars = {};
+  window.location.href.replace(location.hash, '').replace(
+    /[?&]+([^=&]+)=?([^&]*)?/gi,
+    function(m, key, value) {
+      vars[key] = value !== undefined ? value : '';
+    }
+  );
+  return param ? (vars[param] || null) : vars;
+}
+
+var softs = {
+  NAME: {
+    file: 'softs/command_and_conquer.zip',
+    cmd: 'cnc/cnc_en.COM',
+    pointer: true
+  }
+};
+
+var file = "NAME";
+if ($_GET('soft') && softs[$_GET('soft')]) file = $_GET('soft');
+
+var dosbox = new Emulator(
+  document.querySelector("#canvas"),
+  null,
+  new DosBoxLoader(
+    DosBoxLoader.emulatorJS("js/dosbox-sync.js"),
+    DosBoxLoader.locateAdditionalEmulatorJS(locateAdditionalFiles),
+    DosBoxLoader.nativeResolution(640, 400),
+    DosBoxLoader.mountZip("c",
+      DosBoxLoader.fetchFile("Software", softs[file].file)),
+    DosBoxLoader.startExe(softs[file].cmd)
+  )
+);
+
+dosbox.start({ waitAfterDownloading: false });
+
+function locateAdditionalFiles(filename) {
+  if (filename === "dosbox.html.mem") return "js/dosbox-sync.mem";
+  return "js/" + filename;
+}
+
+/* ===== Loader finish ===== */
+setTimeout(() => {
+  fg.style.strokeDashoffset = 0;
+  loading.style.opacity = "0";
+  loading.style.transition = "opacity 300ms";
+  setTimeout(() => loading.remove(), 350);
+}, 1200);
+</script>
+
+</body>
+  </html>
