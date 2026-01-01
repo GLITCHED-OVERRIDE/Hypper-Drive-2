@@ -616,5 +616,11 @@
     "name": "Sonic R",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Sonic%20R.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Sega%20Saturn/Sonic%20R/index.html"
+  },
+  {
+    "type": "NGPC",
+    "name": "Metal Slug: 1st Mission",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Metal%20Slug-%201st%20Mission.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/NGPC/Metal%20Slug%201st%20Mission/index.html"
   }
 ]
