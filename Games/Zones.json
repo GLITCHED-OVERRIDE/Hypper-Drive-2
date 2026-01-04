@@ -652,5 +652,11 @@
     "name": "Cannon Fodder",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Cannon%20Fodder.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Atari%20Jaguar/Cannon%20Fodder/index.html"
+  },
+  {
+    "type": "Arcade",
+    "name": "Metal Slug",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Metal%20Slug.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Arcade/Metal%20Slug/index.html"
   }
 ]
