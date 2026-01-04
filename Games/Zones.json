@@ -640,5 +640,11 @@
     "name": "Doom",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Doom.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/MSDOS/Doom/index.html"
+  },
+  {
+    "type": "AJ",
+    "name": "Alien VS Predator",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Alien%20VS%20Predator.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Atari%20Jaguar/Alien%20VS%20Predator/index.html"
   }
 ]
