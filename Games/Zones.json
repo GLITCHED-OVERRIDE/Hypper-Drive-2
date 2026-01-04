@@ -646,5 +646,11 @@
     "name": "Alien VS Predator",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Alien%20VS%20Predator.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Atari%20Jaguar/Alien%20VS%20Predator/index.html"
+  },
+  {
+    "type": "AJ",
+    "name": "Cannon Fodder",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Cannon%20Fodder.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Atari%20Jaguar/Cannon%20Fodder/index.html"
   }
 ]
