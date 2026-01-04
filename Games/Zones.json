@@ -634,5 +634,11 @@
     "name": "Command and Conquer",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Command%20and%20Conquer.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/MSDOS/Command%20and%20Conquer/index.html"
+  },
+  {
+    "type": "MSDOS",
+    "name": "Doom",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Doom.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/MSDOS/Doom/index.html"
   }
 ]
