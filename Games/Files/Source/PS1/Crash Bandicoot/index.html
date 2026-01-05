@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hypper-Drive 2 | Crash Bandicoot (PS1)</title>
 
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+#game {
+  width: 100%;
+  height: 100%;
+}
+
+#loading {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 999;
+}
+
+#status {
+  margin-top: 15px;
+  font-size: 16px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="game"></div>
+
+<div id="loading">
+  <div id="status">Downloading game parts…</div>
+</div>
+
+<script>
+const TOTAL_PARTS = 22;
+const BASE_URL =
+  "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/main/Games/Files/Source/PS1/Crash%20Bandicoot/Source/Crash%20Bandicoot.zip.part.";
+
+const statusEl = document.getElementById("status");
+
+async function fetchParts() {
+  const buffers = [];
+
+  for (let i = 1; i <= TOTAL_PARTS; i++) {
+    const partNum = String(i).padStart(3, "0");
+    const url = BASE_URL + partNum;
+
+    statusEl.textContent = `Downloading part ${i}/${TOTAL_PARTS}…`;
+
+    const res = await fetch(url);
+    if (!res.ok) throw new Error("Failed to fetch " + url);
+
+    buffers.push(await res.arrayBuffer());
+  }
+
+  return new Blob(buffers, { type: "application/zip" });
+}
+
+(async () => {
+  try {
+    const gameBlob = await fetchParts();
+    statusEl.textContent = "Starting emulator…";
+
+    const gameURL = URL.createObjectURL(gameBlob);
+
+    /* ===== EmulatorJS config ===== */
+    window.EJS_player = "#game";
+    window.EJS_core = "psx";
+    window.EJS_gameName = "Crash Bandicoot";
+    window.EJS_color = "#e10600";
+    window.EJS_startOnLoaded = true;
+    window.EJS_pathtodata =
+      "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
+    window.EJS_gameUrl = gameURL;
+
+    const script = document.createElement("script");
+    script.src =
+      "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
+
+    script.onload = () => {
+      document.getElementById("loading").remove();
+    };
+
+    document.body.appendChild(script);
+
+  } catch (err) {
+    statusEl.textContent = "Error loading game.";
+    console.error(err);
+  }
+})();
+</script>
+
+</body>
+  </html>
