@@ -658,5 +658,11 @@
     "name": "Metal Slug",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Metal%20Slug.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Arcade/Metal%20Slug/index.html"
+  },
+  {
+    "type": "Arcade",
+    "name": "Metal Slug 2",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Metal%20Slug%202.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Arcade/Metal%20Slug%202/index.html"
   }
 ]
