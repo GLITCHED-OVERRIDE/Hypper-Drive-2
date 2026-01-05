@@ -682,5 +682,11 @@
     "name": "BeepBox",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Beepbox.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PC/Beepbox/index.html"
+  },
+  {
+    "type": "PS1",
+    "name": "Crash Bandicoot",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Crash%20Bandicoot.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PS1/Crash%20Bandicoot/index.html"
   }
 ]
