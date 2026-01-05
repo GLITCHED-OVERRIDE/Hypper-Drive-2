@@ -666,9 +666,15 @@
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Arcade/Metal%20Slug%202/index.html"
   },
   {
-    "type": "SSG",
+    "type":"SGG",
     "name": "G.G. Shinobi",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/G.G.%20Shinobi.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/SSG/G.G.%20Shinobi/index.html"
+  },
+  {
+    "type": "SGG",
+    "name": "Sonic the Hedgehog",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Sonic%20The%20Hedgehog.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/SSG/Sonic%20The%20Hedgehog/index.html"
   }
 ]
