@@ -676,5 +676,11 @@
     "name": "Sonic the Hedgehog",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Sonic%20The%20Hedgehog.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/SSG/Sonic%20The%20Hedgehog/index.html"
+  },
+  {
+    "type": "PC",
+    "name": "BeepBox",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Beepbox.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PC/Beepbox/index.html"
   }
 ]
