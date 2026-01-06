@@ -2,188 +2,121 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Hypper Drive 2 | God of War: Ghost of Sparta (PSP)</title>
+<title>Hypper Drive 2 | PSP Loader</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <style>
 html, body {
-  height: 100%;
   margin: 0;
+  height: 100%;
   background: #000;
-  font-family: monospace;
-  font-weight: bold;
-  overflow: hidden;
   color: #fff;
+  font-family: monospace;
+  overflow: hidden;
 }
-
-#error {
-  position: absolute;
-  top: 18px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #f33;
-  z-index: 1000;
-}
-
-#game {
-  position: absolute;
-  inset: 0;
-  background: #000;
-}
-
-/* ===== Hypper-Drive-2 Loader ===== */
+#game { position: absolute; inset: 0; }
 #loading {
   position: absolute;
   inset: 0;
-  background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  z-index: 999;
 }
-
-#logoWrap {
-  position: relative;
-  width: 260px;
-  height: 260px;
-}
-
-#logoWrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-svg {
-  position: absolute;
-  inset: 0;
-  transform: rotate(-90deg);
-}
-
-circle {
-  fill: none;
-  stroke-width: 12;
-  stroke-linecap: round;
-}
-
-#bg {
-  stroke: rgba(255,255,255,0.08);
-}
-
-#fg {
-  stroke: red;
-  stroke-dasharray: 565.48;
-  stroke-dashoffset: 565.48;
-  transition: stroke-dashoffset 0.12s linear;
-}
-
-#text {
-  margin-top: 18px;
-  font-size: 15px;
+#progress {
+  margin-top: 12px;
 }
 </style>
 </head>
 
 <body>
 
-<div id="error"></div>
 <div id="game"></div>
 
 <div id="loading">
-  <div id="logoWrap">
-    <img src="https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/main/H.D.2.png">
-    <svg viewBox="0 0 200 200">
-      <circle id="bg" cx="100" cy="100" r="90"></circle>
-      <circle id="fg" cx="100" cy="100" r="90"></circle>
-    </svg>
-  </div>
-  <div id="text">Loading God of War: Ghost of Sparta…</div>
+  <h2>Loading God of War: Ghost of Sparta…</h2>
+  <div id="progress">0%</div>
 </div>
 
+<!-- JSZip -->
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+
 <script>
-/* ===== PSP ZIP PARTS ===== */
 const partUrls = (() => {
   const base =
-    "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/main/Games/Files/Source/PSP/God%20of%20War:%20Ghost%20of%20Sparta/Source/God%20of%20War-%20Ghost%20of%20Sparta.zip.";
+    "https://github.com/GLITCHED-OVERRIDE/Hypper-Drive-2/raw/refs/heads/main/Games/Files/Source/PSP/God of War: Ghost of Sparta/Source/God of War - Ghost of Sparta.zip";
   const parts = [];
   for (let i = 1; i <= 44; i++) {
-    parts.push(base + String(i).padStart(3, "0"));
+    parts.push(base + "." + String(i).padStart(3, "0"));
   }
   return parts;
 })();
 
-const fg = document.getElementById("fg");
-const loading = document.getElementById("loading");
-const error = document.getElementById("error");
+const progressText = document.getElementById("progress");
 
-/* ===== Merge ZIP Parts ===== */
-async function fetchWithProgress(urls) {
-  let received = 0;
-  const chunks = [];
-
+async function fetchParts(urls) {
+  const buffers = [];
   for (let i = 0; i < urls.length; i++) {
     const res = await fetch(urls[i]);
-    if (!res.ok) throw new Error("Failed to fetch part " + (i + 1));
-    const buf = new Uint8Array(await res.arrayBuffer());
-    chunks.push(buf);
-    received++;
-
-    fg.style.strokeDashoffset =
-      565.48 * (1 - received / urls.length);
+    if (!res.ok) throw new Error("Failed part " + (i + 1));
+    buffers.push(new Uint8Array(await res.arrayBuffer()));
+    progressText.textContent =
+      Math.floor(((i + 1) / urls.length) * 50) + "% (downloading)";
   }
 
-  const size = chunks.reduce((s, c) => s + c.length, 0);
+  const size = buffers.reduce((s, b) => s + b.length, 0);
   const merged = new Uint8Array(size);
   let offset = 0;
-  for (const c of chunks) {
-    merged.set(c, offset);
-    offset += c.length;
+  for (const b of buffers) {
+    merged.set(b, offset);
+    offset += b.length;
   }
-
-  return new Blob([merged], { type: "application/zip" });
+  return merged;
 }
 
 (async () => {
   try {
-    const blob = await fetchWithProgress(partUrls);
-    const blobUrl = URL.createObjectURL(blob);
+    // 1️⃣ Download ZIP
+    const zipData = await fetchParts(partUrls);
 
-    /* ===== EmulatorJS PSP CONFIG ===== */
+    // 2️⃣ Unzip
+    progressText.textContent = "60% (extracting)";
+    const zip = await JSZip.loadAsync(zipData);
+
+    // 3️⃣ Find ISO
+    let isoFile = null;
+    zip.forEach((name, file) => {
+      if (name.toLowerCase().endsWith(".iso") || name.toLowerCase().endsWith(".cso")) {
+        isoFile = file;
+      }
+    });
+
+    if (!isoFile) throw new Error("No ISO found inside ZIP");
+
+    // 4️⃣ Extract ISO
+    progressText.textContent = "80% (preparing ISO)";
+    const isoBlob = await isoFile.async("blob");
+    const isoUrl = URL.createObjectURL(isoBlob);
+
+    // 5️⃣ Start EmulatorJS
     window.EJS_player = "#game";
-    window.EJS_core = "ppsspp";
+    window.EJS_core = "psp";
     window.EJS_gameName = "God of War: Ghost of Sparta";
-    window.EJS_gameUrl = blobUrl;
-
-    /* REQUIRED FOR PSP */
+    window.EJS_gameUrl = isoUrl;
+    window.EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+    window.EJS_startOnLoaded = true;
     window.EJS_threads = true;
 
-    window.EJS_startOnLoaded = true;
-    window.EJS_pathtodata =
-      "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@latest/data/";
-
-    const s = document.createElement("script");
-    s.src =
-      "https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@latest/data/loader.js";
-
-    s.onload = () => {
-      loading.style.opacity = "0";
-      loading.style.transition = "opacity 300ms";
-      setTimeout(() => loading.remove(), 350);
-    };
-
-    s.onerror = () =>
-      error.textContent = "Failed to load EmulatorJS";
-
-    document.body.appendChild(s);
+    const script = document.createElement("script");
+    script.src = "https://cdn.emulatorjs.org/stable/data/loader.js";
+    script.onload = () => document.getElementById("loading").remove();
+    document.body.appendChild(script);
 
   } catch (e) {
-    error.textContent = "Error: " + e.message;
-    loading.remove();
+    progressText.textContent = "Error: " + e.message;
     console.error(e);
   }
 })();
 </script>
 
 </body>
-  </html>
+</html>
