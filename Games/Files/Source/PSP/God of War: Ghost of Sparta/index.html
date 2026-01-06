@@ -2,18 +2,24 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Hypper Drive 2 | PSP Loader</title>
+<title>Hypper-Drive-2 | God of War - Ghost of Sparta</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 html, body {
   margin: 0;
   height: 100%;
   background: #000;
-  color: #fff;
   font-family: monospace;
+  color: #fff;
   overflow: hidden;
 }
-#game { position: absolute; inset: 0; }
+
+#game {
+  position: absolute;
+  inset: 0;
+}
+
 #loading {
   position: absolute;
   inset: 0;
@@ -21,9 +27,17 @@ html, body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  z-index: 999;
 }
+
+#logo {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
 #progress {
-  margin-top: 12px;
+  margin-top: 10px;
+  font-size: 14px;
 }
 </style>
 </head>
@@ -33,17 +47,17 @@ html, body {
 <div id="game"></div>
 
 <div id="loading">
-  <h2>Loading God of War: Ghost of Sparta…</h2>
+  <img id="logo" src="https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/main/H.D.2.png">
+  <div>Loading God of War - Ghost of Sparta…</div>
   <div id="progress">0%</div>
 </div>
 
-<!-- JSZip -->
 <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 
 <script>
 const partUrls = (() => {
   const base =
-    "https://github.com/GLITCHED-OVERRIDE/Hypper-Drive-2/raw/refs/heads/main/Games/Files/Source/PSP/God of War: Ghost of Sparta/Source/God of War - Ghost of Sparta.zip";
+    "https://github.com/GLITCHED-OVERRIDE/Hypper-Drive-2/raw/refs/heads/main/Games/Files/Source/PSP/God%20of%20War:%20Ghost%20of%20Sparta/Source/God%20of%20War%20-%20Ghost%20of%20Sparta.zip";
   const parts = [];
   for (let i = 1; i <= 44; i++) {
     parts.push(base + "." + String(i).padStart(3, "0"));
@@ -51,69 +65,66 @@ const partUrls = (() => {
   return parts;
 })();
 
-const progressText = document.getElementById("progress");
+const progress = document.getElementById("progress");
 
-async function fetchParts(urls) {
-  const buffers = [];
+async function fetchAndMerge(urls) {
+  const chunks = [];
   for (let i = 0; i < urls.length; i++) {
     const res = await fetch(urls[i]);
-    if (!res.ok) throw new Error("Failed part " + (i + 1));
-    buffers.push(new Uint8Array(await res.arrayBuffer()));
-    progressText.textContent =
-      Math.floor(((i + 1) / urls.length) * 50) + "% (downloading)";
+    if (!res.ok) throw new Error("Failed to fetch part " + (i + 1));
+    chunks.push(new Uint8Array(await res.arrayBuffer()));
+    progress.textContent = Math.floor((i + 1) / urls.length * 50) + "% (downloading)";
   }
 
-  const size = buffers.reduce((s, b) => s + b.length, 0);
+  const size = chunks.reduce((s, c) => s + c.length, 0);
   const merged = new Uint8Array(size);
   let offset = 0;
-  for (const b of buffers) {
-    merged.set(b, offset);
-    offset += b.length;
+  for (const c of chunks) {
+    merged.set(c, offset);
+    offset += c.length;
   }
   return merged;
 }
 
 (async () => {
   try {
-    // 1️⃣ Download ZIP
-    const zipData = await fetchParts(partUrls);
+    // Download ZIP
+    const zipData = await fetchAndMerge(partUrls);
 
-    // 2️⃣ Unzip
-    progressText.textContent = "60% (extracting)";
+    // Extract ZIP
+    progress.textContent = "60% (extracting)";
     const zip = await JSZip.loadAsync(zipData);
 
-    // 3️⃣ Find ISO
-    let isoFile = null;
+    let isoEntry = null;
     zip.forEach((name, file) => {
       if (name.toLowerCase().endsWith(".iso") || name.toLowerCase().endsWith(".cso")) {
-        isoFile = file;
+        isoEntry = file;
       }
     });
 
-    if (!isoFile) throw new Error("No ISO found inside ZIP");
+    if (!isoEntry) throw new Error("ISO not found in ZIP");
 
-    // 4️⃣ Extract ISO
-    progressText.textContent = "80% (preparing ISO)";
-    const isoBlob = await isoFile.async("blob");
+    progress.textContent = "80% (preparing ISO)";
+    const isoBlob = await isoEntry.async("blob");
     const isoUrl = URL.createObjectURL(isoBlob);
 
-    // 5️⃣ Start EmulatorJS
+    // EmulatorJS
     window.EJS_player = "#game";
     window.EJS_core = "psp";
-    window.EJS_gameName = "God of War: Ghost of Sparta";
+    window.EJS_gameName = "God of War - Ghost of Sparta";
     window.EJS_gameUrl = isoUrl;
     window.EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
-    window.EJS_startOnLoaded = true;
     window.EJS_threads = true;
+    window.EJS_startOnLoaded = true;
 
     const script = document.createElement("script");
     script.src = "https://cdn.emulatorjs.org/stable/data/loader.js";
     script.onload = () => document.getElementById("loading").remove();
     document.body.appendChild(script);
 
-  } catch (e) {
-    progressText.textContent = "Error: " + e.message;
-    console.error(e);
+  } catch (err) {
+    progress.textContent = "Error: " + err.message;
+    console.error(err);
   }
 })();
 </script>
