@@ -688,5 +688,11 @@
     "name": "Crash Bandicoot",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Crash%20Bandicoot.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PS1/Crash%20Bandicoot/index.html"
+  },
+  {
+    "type": "PSP",
+    "name": "God of War: Ghost of Sparta",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/God%20of%20War-%20Ghost%20of%20Sparta.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PSP/God%20of%20War%3A%20Ghost%20of%20Sparta/index.html"
   }
 ]
