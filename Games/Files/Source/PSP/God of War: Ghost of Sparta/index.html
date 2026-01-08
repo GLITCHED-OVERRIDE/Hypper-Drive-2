@@ -115,7 +115,7 @@ async function fetchAndMerge(urls) {
     window.EJS_gameUrl = isoUrl;
     window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
     window.EJS_threads = true;
-
+    window.EJS_startOnLoaded = true;
     const script = document.createElement("script");
     script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
     script.onload = () => document.getElementById("loading").remove();
