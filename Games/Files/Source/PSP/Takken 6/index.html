@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hypper-Drive-2 | God of War - Ghost of Sparta</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<style>
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #000;
+  font-family: monospace;
+  color: #fff;
+  overflow: hidden;
+}
+
+#game {
+  position: absolute;
+  inset: 0;
+}
+
+#loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 999;
+}
+
+#logo {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+#progress {
+  margin-top: 10px;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="game"></div>
+
+<div id="loading">
+  <img id="logo" src="https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/main/H.D.2.png">
+  <div>Loading Takken 6…</div>
+  <div id="progress">0%</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+
+<script>
+const partUrls = (() => {
+  const base =
+    "https://raw.githack.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PSP/Takken 6/Source/Tekken 6 (USA) (En,Ja,Fr,De,Es,It,Ko,Ru).zip";
+  const parts = [];
+  for (let i = 1; i <= 31; i++) {
+    parts.push(base + "." + String(i).padStart(3, "0"));
+  }
+  return parts;
+})();
+
+const progress = document.getElementById("progress");
+
+async function fetchAndMerge(urls) {
+  const chunks = [];
+  for (let i = 0; i < urls.length; i++) {
+    const res = await fetch(urls[i]);
+    if (!res.ok) throw new Error("Failed to fetch part " + (i + 1));
+    chunks.push(new Uint8Array(await res.arrayBuffer()));
+    progress.textContent = Math.floor((i + 1) / urls.length * 50) + "% (downloading)";
+  }
+
+  const size = chunks.reduce((s, c) => s + c.length, 0);
+  const merged = new Uint8Array(size);
+  let offset = 0;
+  for (const c of chunks) {
+    merged.set(c, offset);
+    offset += c.length;
+  }
+  return merged;
+}
+
+(async () => {
+  try {
+    // Download ZIP
+    const zipData = await fetchAndMerge(partUrls);
+
+    // Extract ZIP
+    progress.textContent = "60% (extracting)";
+    const zip = await JSZip.loadAsync(zipData);
+
+    let isoEntry = null;
+    zip.forEach((name, file) => {
+      if (name.toLowerCase().endsWith(".iso") || name.toLowerCase().endsWith(".cso")) {
+        isoEntry = file;
+      }
+    });
+
+    if (!isoEntry) throw new Error("ISO not found in ZIP");
+
+    progress.textContent = "80% (preparing ISO)";
+    const isoBlob = await isoEntry.async("blob");
+    const isoUrl = URL.createObjectURL(isoBlob);
+
+    // EmulatorJS
+    window.EJS_player = "#game";
+    window.EJS_core = "psp";
+    window.EJS_gameName = "Takken 6";
+    window.EJS_gameUrl = isoUrl;
+    window.EJS_pathtodata = "https://cdn.jsdelivr.net/gh/genizy/emu@master/";
+    window.EJS_threads = true;
+    window.EJS_startOnLoaded = true;
+    const script = document.createElement("script");
+    script.src = "https://cdn.jsdelivr.net/gh/genizy/emu@master/loader.js";
+    script.onload = () => document.getElementById("loading").remove();
+    document.body.appendChild(script);
+
+  } catch (err) {
+    progress.textContent = "Error: " + err.message;
+    console.error(err);
+  }
+})();
+</script>
+
+</body>
+</html>
