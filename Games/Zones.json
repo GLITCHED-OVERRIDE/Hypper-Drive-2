@@ -706,5 +706,11 @@
     "name": "Cool Boarders",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Cool%20Boarders.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PS1/Cool%20Boarders/index.html"
+  },
+  {
+    "type": "PSP",
+    "name": "GTA: Chinatown",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/GTA%20Chinatown%20Wars.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PSP/GTA%20Chinatown%20Wars/index.html"
   }
 ]
