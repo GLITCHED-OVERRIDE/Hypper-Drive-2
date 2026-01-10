@@ -712,5 +712,11 @@
     "name": "GTA: Chinatown",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/GTA%20Chinatown%20Wars.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PSP/GTA%20Chinatown%20Wars/index.html"
+  },
+  {
+    "type": "PSP",
+    "name": "Dante's Inferno",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Dante's%20Inferno.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PSP/Dante's%20Inferno/index.html",
   }
 ]
