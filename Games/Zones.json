@@ -730,6 +730,12 @@
     "name": "A Koopas Revenge",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/A%20Koopas%20Revenge.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PC/A%20Koopas%20Revenge/index.html"
+  },
+  {
+    "type": "PC",
+    "name": "Admist The Sky",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Amidst%20The%20Sky.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PC/Admist%20The%20Sky/index.html"
   }
 ]
 
