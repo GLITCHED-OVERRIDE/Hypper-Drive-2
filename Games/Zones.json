@@ -736,6 +736,12 @@
     "name": "Admist The Sky",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Amidst%20The%20Sky.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PC/Admist%20The%20Sky/index.html"
+  },
+  {
+    "type": "Moblie",
+    "name": "AdVenture Capitalist",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Adventure%20Captalist.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Moblie/AdVenture%20Capitalist/index.html"
   }
 ]
 
