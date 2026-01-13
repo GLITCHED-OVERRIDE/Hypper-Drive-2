@@ -718,6 +718,12 @@
     "name": "Dante's Inferno",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Dante's%20Inferno.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PSP/Dante's%20Inferno/index.html"
+  },
+  {
+    "type": "PC",
+    "name": "A Koopas Revenge 2",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/A%20Koopas%20Revenge%202.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PC/A%20Koopas%20Revenge%202/index.html"
   }
 ]
 
