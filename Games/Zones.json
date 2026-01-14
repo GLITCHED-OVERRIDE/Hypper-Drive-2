@@ -742,6 +742,12 @@
     "name": "AdVenture Capitalist",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Adventure%20Captalist.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Moblie/AdVenture%20Capitalist/index.html"
+  },
+  {
+    "type": "Moblie",
+    "name": "Age of War 2",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Age%20of%20War%202.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Moblie/Age%20of%20War%202/index.html"
   }
 ]
 
