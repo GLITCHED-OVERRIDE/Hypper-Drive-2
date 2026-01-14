@@ -754,6 +754,12 @@
     "name": "Age of War",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Age%20of%20War.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Moblie/Age%20of%20War/index.html"
+  },
+  {
+    "type": "Moblie",
+    "name": "Ages Of Conflict",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Ages%20of%20Conflict.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Moblie/Ages%20of%20Conflict/index.html"
   }
 ]
 
