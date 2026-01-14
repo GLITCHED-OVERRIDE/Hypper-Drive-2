@@ -766,6 +766,12 @@
     "name": "Alien Hominid",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Alien%20Hominid.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PC/Alien%20Hominid/index.html"
+  },
+  {
+    "type": "PC",
+    "name": "Alien Sky Invasion",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Alien%20Sky%20Invasion.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PC/Alien%20Sky%20Invasion/index.html"
   }
 ]
 
