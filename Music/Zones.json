@@ -1,10 +1,10 @@
 [
   {
     "artist": "Eminem",
-    "artist-icon": "",
+    "artist-icon": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Music/assets/Eminem/Artist.png",
     "type": "Rap",
     "song-name": "Godzilla",
-    "cover": "",
-    "mp3": ""
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Music/assets/Eminem/Godzilla/Godzilla-Eminem.png",
+    "mp3": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Music/assets/Eminem/Godzilla/Eminem Godzilla ft Juice WRLD Official Music Video.mp3"
   }
 ]
