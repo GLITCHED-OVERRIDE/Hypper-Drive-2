@@ -808,5 +808,11 @@
     "name": "GTA: Vice City Story's",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/GTA-%20Vice%20City%20Story's.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PSP/GTA%3A%20Vice%20City%20Storys/index.html"
+  },
+  {
+    "type": "PSP",
+    "name": "Lego Batman: The Videogame",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Lego%20Batman-%20The%20Videogame.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PSP/Lego%20Batman%3A%20The%20Videogame/index.html"
   }
 ]
