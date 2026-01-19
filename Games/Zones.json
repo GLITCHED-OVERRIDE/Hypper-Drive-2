@@ -814,5 +814,11 @@
     "name": "Lego Batman: The Videogame",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Lego%20Batman-%20The%20Videogame.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PSP/Lego%20Batman%3A%20The%20Videogame/index.html"
+  },
+  {
+    "type": "PSP",
+    "name": "God of War: Chains of Olympus",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/God%20of%20War-%20Chains%20of%20Olympus.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PSP/God%20of%20War%3A%20Chains%20of%20Olympas/index.html"
   }
 ]
