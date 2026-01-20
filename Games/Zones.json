@@ -820,5 +820,11 @@
     "name": "God of War: Chains of Olympus",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/God%20of%20War-%20Chains%20of%20Olympus.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PSP/God%20of%20War%3A%20Chains%20of%20Olympas/index.html"
+  },
+  {
+    "type": "Moblie",
+    "name": "Amigo Pancho 4",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Amigo%20Pancho%204.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Moblie/Amigo%20Pancho%204/index.html"
   }
 ]
