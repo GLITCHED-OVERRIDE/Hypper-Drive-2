@@ -826,5 +826,11 @@
     "name": "Amigo Pancho 4",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Amigo%20Pancho%204.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Moblie/Amigo%20Pancho%204/index.html"
+  },
+  {
+    "type": "Moblie",
+    "name": "Amigo Pancho 5",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Amigo%20Pancho%205.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Moblie/Amigo%20Pancho%205/index.html"
   }
 ]
