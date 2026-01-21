@@ -874,5 +874,11 @@
     "name": "Apple Shooter",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Apple%20Shooter.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Moblie/Apple%20Shooter/index.html"
+  },
+  {
+    "type": "PC",
+    "name": "Apple Worm",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Apple%20Worm.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PC/Apple%20Worm/index.html"
   }
 ]
