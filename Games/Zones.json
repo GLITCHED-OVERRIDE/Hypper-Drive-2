@@ -856,5 +856,11 @@
     "name": "Crisis Core: Final Fantasy VII",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Crisis%20Core-%20Final%20Fantasy%20VII.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PSP/Crisis%20Core%3A%20Final%20Fantasy%20VII/index.html"
+  },
+  {
+    "type": "Moblie",
+    "name": "Angry Birds",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Angry%20Birds%20Space.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Moblie/Angry%20Birds%20Space/index.html"
   }
 ]
