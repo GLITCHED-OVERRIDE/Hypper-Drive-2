@@ -850,5 +850,11 @@
     "name": "Amorphous",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Amorphous.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PC/Amorphous/index.html"
+  },
+  {
+    "type": "PSP",
+    "name": "Crisis Core: Final Fantasy VII",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Crisis%20Core-%20Final%20Fantasy%20VII.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PSP/Crisis%20Core%3A%20Final%20Fantasy%20VII/index.html"
   }
 ]
