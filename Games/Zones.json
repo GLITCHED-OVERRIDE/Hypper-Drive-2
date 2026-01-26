@@ -892,5 +892,11 @@
     "name": "Archery World Tour",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Archery%20World%20Tour.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Moblie/Archery%20World%20Tour/index.html"
+  },
+  {
+    "type": "PSP",
+    "name": "Shin Megami Tensei: Persona 3 Portable",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Shin%20Megami%20Tensei-%20Persona%203%20Portable.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PSP/Shin%20Megami%20Tensei%3A%20Persona%203%20Portable/index.html"
   }
 ]
