@@ -904,5 +904,11 @@
     "name": "Metal Gears Solid: Peace Walker",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Metal%20Gears%20Solid-%20Peace%20Walker.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PSP/Metal%20Gears%20Solid%3A%20Peace%20Walker/index.html"
+  },
+  {
+    "type": "PSP",
+    "name": "Ridge Racer",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Ridge%20Racer.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PSP/Ridge%20Racer/index.html"
   }
 ]
