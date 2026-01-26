@@ -1,2 +1,3 @@
 # Hypper-Drive-2
-The better Version of Hypper-Drive
+The Better Version of Hypper-Drive,
+Currently with 150+ games
