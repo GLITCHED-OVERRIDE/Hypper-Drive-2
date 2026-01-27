@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>ZIP Web Loader</title>
+<title>Glitch's Zip Runner</title>
 <style>
   body, html { margin: 0; height: 100%; overflow: hidden; background: black; }
   iframe { width: 100%; height: 100%; border: none; }
@@ -22,7 +22,7 @@
 
     try {
         // 1. Fetch the zip
-        const zipUrl = '/file.zip'; // Hardcoded zip path
+        const zipUrl = 'https://cdn.jsdelivr.net/gh/GLITCHED-OVERRIDE/Hypper-Drive-2@main/Games/Files/Source/Moblie/Crossy%20Road/file.zip'; // Hardcoded zip path
         const response = await fetch(zipUrl);
         const blob = await response.blob();
         const zip = await JSZip.loadAsync(blob);
@@ -38,7 +38,7 @@
         }));
 
         // 3. Register the service worker (must exist on same origin)
-        await navigator.serviceWorker.register('/sw.js');
+        await navigator.serviceWorker.register('/Glitch's.sw.js');
         await navigator.serviceWorker.ready;
 
         // 4. Send files to service worker
