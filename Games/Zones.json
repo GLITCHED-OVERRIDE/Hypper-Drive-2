@@ -928,5 +928,11 @@
     "name": "Monster Hunter Freedom",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Monster%20Hunter%20Freedom.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PSP/Monster%20Hunter%20Freedom/index.html"
+  },
+  {
+    "type": "Moblie",
+    "name": "Crossy Road",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Crossy%20Road.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Moblie/Crossy%20Road/index.html"
   }
 ]
