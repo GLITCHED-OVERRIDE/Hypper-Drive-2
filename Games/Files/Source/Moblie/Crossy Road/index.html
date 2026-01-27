@@ -21,7 +21,7 @@
     }
 
     // 1. Fetch the zip
-    const zipUrl = 'https://cdn.jsdelivr.net/gh/GLITCHED-OVERRIDE/Hypper-Drive-2@main/Games/Files/Source/Moblie/Crossy%20Road/file.zip'; // Hardcoded zip
+    const zipUrl = 'https://cdn.jsdelivr.net/gh/GLITCHED-OVERRIDE/Hypper-Drive-2@main/Games/Files/Source/Moblie/Crossy%20Road/file.zip'; // hardcoded path
     const response = await fetch(zipUrl);
     const blob = await response.blob();
     const zip = await JSZip.loadAsync(blob);
@@ -32,19 +32,26 @@
         const file = zip.files[path];
         if (!file.dir) {
             const data = await file.async('arraybuffer');
-            fileMap['/Game/' + path] = data; // All files start with /Game/
+            fileMap['/Game/' + path] = data; // all files under /Game/
         }
     }));
 
-    // 3. Register the service worker
-    await navigator.serviceWorker.register('https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/Moblie/Crossy%20Road/sw.js');
+    // 3. Fetch SW script from JSDelivr
+    const swText = await fetch('https://cdn.jsdelivr.net/gh/GLITCHED-OVERRIDE/Hypper-Drive-2@main/Games/Files/Source/Moblie/Crossy%20Road/sw.js').then(r => r.text());
+
+    // 4. Create a blob URL for SW so it’s same-origin
+    const swBlob = new Blob([swText], { type: 'application/javascript' });
+    const swUrl = URL.createObjectURL(swBlob);
+
+    // 5. Register service worker from blob
+    await navigator.serviceWorker.register(swUrl);
     await navigator.serviceWorker.ready;
 
-    // 4. Send files to service worker
+    // 6. Send file map to service worker
     if (navigator.serviceWorker.controller) {
         navigator.serviceWorker.controller.postMessage({ type: 'INIT', files: fileMap });
 
-        // 5. Load /Game/index.html in iframe
+        // 7. Load /Game/index.html in iframe
         document.getElementById('zipFrame').src = '/Game/index.html';
     } else {
         console.error('Service worker is not controlling the page.');
