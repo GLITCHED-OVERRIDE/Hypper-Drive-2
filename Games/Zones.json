@@ -922,5 +922,11 @@
     "name": "Call of Duty: Roads to Victory",
     "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Call%20of%20Duty-%20Roads%20to%20Victory.png",
     "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PSP/Call%20of%20Duty%3A%20Roads%20to%20Victory/index.html"
+  },
+  {
+    "type": "PSP",
+    "name": "Monster Hunter Freedom",
+    "cover": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/ICONS/Monster%20Hunter%20Freedom.png",
+    "url": "https://raw.githubusercontent.com/GLITCHED-OVERRIDE/Hypper-Drive-2/refs/heads/main/Games/Files/Source/PSP/Monster%20Hunter%20Freedom/index.html"
   }
 ]
