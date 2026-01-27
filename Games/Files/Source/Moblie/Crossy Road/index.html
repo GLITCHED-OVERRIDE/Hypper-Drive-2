@@ -2,82 +2,53 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Glitch's Zip Runner</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Loader</title>
 <style>
-  body, html { margin: 0; height: 100%; overflow: hidden; background: black; }
-  iframe { width: 100%; height: 100%; border: none; }
+  body { margin:0; padding:0; background:#000; color:#fff; font-family:sans-serif; }
+  iframe { width: 100%; height: 100%; border: none; display:block; }
 </style>
 </head>
 <body>
+<iframe id="gameFrame"></iframe>
 
-<iframe id="zipFrame"></iframe>
-
-<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <script>
-(async () => {
-    if (!('serviceWorker' in navigator)) {
-        alert('Service Workers are required.');
-        return;
-    }
+const zipMapping = {
+  "Crossy Road": "https://cdn.jsdelivr.net/gh/GLITCHED-OVERRIDE/Hypper-Drive-2@main/Games/Files/Source/Moblie/Crossy%20Road/file.zip"
+};
 
-    try {
-        // 1. Fetch the zip
-        const zipUrl = 'https://cdn.jsdelivr.net/gh/GLITCHED-OVERRIDE/Hypper-Drive-2@main/Games/Files/Source/Moblie/Crossy%20Road/file.zip'; // Hardcoded zip path
-        const response = await fetch(zipUrl);
-        const blob = await response.blob();
-        const zip = await JSZip.loadAsync(blob);
+async function loadGameFromZip(gameName) {
+  try {
+    // 1. Map the zip URL to a server-extracted path
+    const basePath = `/Game/${encodeURIComponent(gameName)}/`;
 
-        // 2. Build file map under /Game/
-        const fileMap = {};
-        await Promise.all(Object.keys(zip.files).map(async path => {
-            const file = zip.files[path];
-            if (!file.dir) {
-                const data = await file.async('arraybuffer');
-                fileMap['/Game/' + path] = data; // all files start with /Game/
-            }
-        }));
+    // 2. Attempt to fetch the main HTML
+    const indexUrl = basePath + "index.html";
+    const res = await fetch(indexUrl);
+    if (!res.ok) throw new Error("Game HTML not found. Make sure the zip is extracted to " + basePath);
 
-        // 3. Register the service worker (must exist on same origin)
-        await navigator.serviceWorker.register('/Glitched.sw.js');
-        await navigator.serviceWorker.ready;
+    // 3. Load the HTML in an iframe
+    document.getElementById("gameFrame").src = indexUrl;
+  } catch (err) {
+    document.body.innerHTML = `<h1 style="color:#fff;">Failed to load game: ${gameName}</h1>`;
+    console.error(err);
+  }
+}
 
-        // 4. Send files to service worker
-        if (navigator.serviceWorker.controller) {
-            navigator.serviceWorker.controller.postMessage({ type: 'INIT', files: fileMap });
-        } else {
-            console.error('Service worker is not controlling the page yet.');
-        }
+// Determine game from URL path: /Game/[gameName]
+const parts = window.location.pathname.split("/").filter(Boolean);
+if (parts.length === 2 && parts[0].toLowerCase() === "game") {
+  const gameName = decodeURIComponent(parts[1]);
 
-        // 5. Load /Game/index.html in iframe
-        const iframe = document.getElementById('zipFrame');
-        iframe.src = '/Game/index.html';
-
-        // 6. Log any errors from the iframe (e.g., syntax errors in zip scripts)
-        window.addEventListener('message', e => {
-            if (e.data && e.data.type === 'iframeError') {
-                console.error('Iframe error:', e.data.error);
-            }
-        });
-
-        iframe.onload = () => {
-            // Inject a script into iframe to catch runtime errors
-            const script = iframe.contentDocument.createElement('script');
-            script.textContent = `
-                window.addEventListener('error', e => {
-                    parent.postMessage({ type: 'iframeError', error: e.message + ' at ' + e.filename + ':' + e.lineno }, '*');
-                });
-                window.addEventListener('unhandledrejection', e => {
-                    parent.postMessage({ type: 'iframeError', error: 'Unhandled promise: ' + e.reason }, '*');
-                });
-            `;
-            iframe.contentDocument.head.appendChild(script);
-        };
-
-    } catch (err) {
-        console.error('Loader error:', err);
-    }
-})();
+  if (zipMapping[gameName]) {
+    // The zip URL is known — instruct user to extract it to /Game/[gameName] manually
+    loadGameFromZip(gameName);
+  } else {
+    document.body.innerHTML = `<h1 style="color:#fff;">Game not found in mapping</h1>`;
+  }
+} else {
+  document.body.innerHTML = `<h1 style="color:#fff;">404 – Game not found</h1>`;
+}
 </script>
-
 </body>
 </html>
