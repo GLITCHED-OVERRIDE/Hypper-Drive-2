@@ -1,33 +1,56 @@
-<!doctype HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <base href="https://cdn.jsdelivr.net/gh/GLITCHED-OVERRIDE/Hypper-Drive-2@main/Games/Files/Source/Moblie/Crossy Road/">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hypper Drive 2 : Crossy Road</title>
-
-  <!-- Load the YouTube Playables SDK as the first script -->
-  <script src="https://cdn.jsdelivr.net/gh/GLITCHED-OVERRIDE/Hypper-Drive-2@main/Games/Files/Source/Moblie/Crossy Road/H.D.2game.js" nonce="33X5IY7_w_BkTXXDwR60gQ"></script>
-
-  <!-- Load game's CSS file. -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/GLITCHED-OVERRIDE/Hypper-Drive-2@main/Games/Files/Source/Moblie/Crossy Road/style.css" nonce="33X5IY7_w_BkTXXDwR60gQ">
-
-   <!-- Core libraries like Three.js -->
-  <script src="https://cdn.jsdelivr.net/gh/GLITCHED-OVERRIDE/Hypper-Drive-2@main/Games/Files/Source/Moblie/Crossy Road/scripts/three.min.js" nonce="33X5IY7_w_BkTXXDwR60gQ"></script>
-
-  <!-- Main game script -->
-  <script src="https://cdn.jsdelivr.net/gh/GLITCHED-OVERRIDE/Hypper-Drive-2@main/Games/Files/Source/Moblie/Crossy Road/scripts/game.min.js" nonce="33X5IY7_w_BkTXXDwR60gQ"></script>
-
-  <!-- Additional scripts -->
-  <script src="https://cdn.jsdelivr.net/gh/GLITCHED-OVERRIDE/Hypper-Drive-2@main/Games/Files/Source/Moblie/Crossy Road/scripts/extra.min.js" nonce="33X5IY7_w_BkTXXDwR60gQ"></script>
-  <script src="https://cdn.jsdelivr.net/gh/GLITCHED-OVERRIDE/Hypper-Drive-2@main/Games/Files/Source/Moblie/Crossy Road/scripts/bootstrap.min.js" nonce="33X5IY7_w_BkTXXDwR60gQ"></script>
+<meta charset="UTF-8">
+<title>Glitch's Zip Runner</title>
+<style>
+  body, html { margin: 0; height: 100%; overflow: hidden; background: black; }
+  iframe { width: 100%; height: 100%; border: none; }
+</style>
 </head>
-
 <body>
-  <canvas id="canvas"></canvas>
-  <div id="build-number"></div>  <!-- delete this when not in testing -->
 
-  
+<iframe id="zipFrame"></iframe>
+
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+<script>
+(async () => {
+    if (!('serviceWorker' in navigator)) {
+        alert('Service Workers are required.');
+        return;
+    }
+
+    // 1. Fetch the zip
+    const zipUrl = 'https://cdn.jsdelivr.net/gh/GLITCHED-OVERRIDE/Hypper-Drive-2@main/Games/Files/Source/Moblie/Crossy%20Road/file.zip'; // Hardcoded zip
+    const response = await fetch(zipUrl);
+    const blob = await response.blob();
+    const zip = await JSZip.loadAsync(blob);
+
+    // 2. Build file map under /Game/
+    const fileMap = {};
+    await Promise.all(Object.keys(zip.files).map(async path => {
+        const file = zip.files[path];
+        if (!file.dir) {
+            const data = await file.async('arraybuffer');
+            fileMap['/Game/' + path] = data; // All files start with /Game/
+        }
+    }));
+
+    // 3. Register the service worker
+    await navigator.serviceWorker.register('https://cdn.jsdelivr.net/gh/GLITCHED-OVERRIDE/Hypper-Drive-2@main/Games/Files/Source/Moblie/Crossy%20Road/sw.js');
+    await navigator.serviceWorker.ready;
+
+    // 4. Send files to service worker
+    if (navigator.serviceWorker.controller) {
+        navigator.serviceWorker.controller.postMessage({ type: 'INIT', files: fileMap });
+
+        // 5. Load /Game/index.html in iframe
+        document.getElementById('zipFrame').src = '/Game/index.html';
+    } else {
+        console.error('Service worker is not controlling the page.');
+    }
+})();
+</script>
+
 </body>
 </html>
